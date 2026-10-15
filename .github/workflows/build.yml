@@ -31,7 +31,7 @@ jobs:
           pyinstaller --windowed ${{ matrix.flags }} --name DiveBarClock
           --add-data "Freya.ttf${{ matrix.sep }}."
           --add-data "BOTTLE.png${{ matrix.sep }}."
-          clock.py
+          Dive Bar Clock.py
       - name: Zip (Mac)
         if: runner.os == 'macOS'
         run: ditto -c -k --keepParent dist/DiveBarClock.app DiveBarClock-${{ matrix.name }}.zip
